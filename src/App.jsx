@@ -7,3 +7,5 @@ function App() {
 }
 
 export default App;
+
+// About Me, Portfolio, Contact, and Resume,
