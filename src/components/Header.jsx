@@ -1,6 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import NavLink from "./NavLink";
 
 export default function Header() {
+  const currentPage = useLocation().pathname;
+
   return (
     <header>
       <nav className="bg-gray-800 border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
@@ -21,42 +24,22 @@ export default function Header() {
             id="mobile-menu-2"
           >
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-              <li>
-                <Link
-                  to={"/AboutMe"}
-                  className="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
-                  aria-current="page"
-                >
-                  About Me
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={"/Contact"}
-                  className="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
-                  aria-current="page"
-                >
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={"/Portfolio"}
-                  className="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
-                  aria-current="page"
-                >
-                  Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={"/Resume"}
-                  className="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
-                  aria-current="page"
-                >
-                  Resume
-                </Link>
-              </li>
+              <NavLink
+                path="/AboutMe"
+                activePath={currentPage}
+                title="About Me"
+              />
+              <NavLink
+                path="/Contact"
+                activePath={currentPage}
+                title="Contact"
+              />
+              <NavLink
+                path="/Portfolio"
+                activePath={currentPage}
+                title="Portfolio"
+              />
+              <NavLink path="/Resume" activePath={currentPage} title="Resume" />
             </ul>
           </div>
         </div>
