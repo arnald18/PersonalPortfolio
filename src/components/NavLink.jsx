@@ -7,8 +7,8 @@ export default function NavLink({ path, activePath, title }) {
         to={path}
         className={
           path === activePath
-            ? " block py-2 pr-4 pl-3  rounded bg-primary-700 lg:bg-transparent lg:p-0 text-lime-700"
-            : "block py-2 pr-4 pl-3  rounded bg-primary-700 lg:bg-transparent lg:p-0 text-white"
+            ? " block py-2 pr-4 pl-3 lg:p-0 text-lime-700"
+            : "block py-2 pr-4 pl-3 lg:p-0 text-white"
         }
       >
         {title}
