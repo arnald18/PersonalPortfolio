@@ -11,7 +11,7 @@
  */
 
 import PortfolioCard from "../components/PortfolioCard";
-import ThoughtHarvesterImage from "../assets/ThoughtHarvester-screenshot.png.png";
+import ThoughtHarvesterImage from "../assets/ThoughtHarvester-screenshot.png";
 import SoundQuestImage from "../assets/soundquest-screenshot.png";
 import HoriseonImage from "../assets/Horiseon-screenshot.png";
 import FreshFuelImage from "../assets/freshfuel-screenshot.png";
